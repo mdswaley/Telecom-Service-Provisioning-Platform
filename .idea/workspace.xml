@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="create service, repository, config and custom exception">
+    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="Adding WebSecurityConfig">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +165,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783789267541</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Adding WebSecurityConfig">
+      <option name="closed" value="true" />
+      <created>1783836413961</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1783836413961</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -173,7 +183,8 @@
     <MESSAGE value="create entity and DTOs for authService" />
     <MESSAGE value="Adding modelMapper dependency" />
     <MESSAGE value="create service, repository, config and custom exception" />
-    <option name="LAST_COMMIT_MESSAGE" value="create service, repository, config and custom exception" />
+    <MESSAGE value="Adding WebSecurityConfig" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding WebSecurityConfig" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

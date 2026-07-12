@@ -19,3 +19,6 @@ spring:
 
 server:
   port: 8081
+
+  jwt:
+    secretKey: aiuhfjdsk54384794873nfgn848f#2nisr39jsfb
