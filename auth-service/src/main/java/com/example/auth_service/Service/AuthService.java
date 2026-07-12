@@ -28,7 +28,7 @@ public class AuthService {
         }
 
         UserEntity createUser = modelMapper.map(registerRequest, UserEntity.class);
-        createUser.setEmail(passwordEncoder.encode(createUser.getPassword()));
+        createUser.setPassword(passwordEncoder.encode(createUser.getPassword()));
 
         UserEntity save = userRepository.save(createUser);
 
