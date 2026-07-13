@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
+@Builder
 public class LoginResponse {
     private String email;
     private String accessToken;
