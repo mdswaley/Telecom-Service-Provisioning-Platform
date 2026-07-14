@@ -6,16 +6,13 @@ import com.example.auth_service.Entity.UserEntity;
 import com.example.auth_service.Repository.UserRepository;
 import com.example.auth_service.Service.AuthService;
 import jakarta.servlet.http.Cookie;
-import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.security.authentication.AuthenticationServiceException;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Arrays;
 
 @RestController
 @RequiredArgsConstructor
