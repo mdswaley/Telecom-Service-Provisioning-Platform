@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="Add EnableEurekaServer annotation and configure in yaml file">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/pom.xml" afterDir="false" />
+    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="Doing crud operation over customer service application">
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/com/example/Customer/Service/Controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/com/example/Customer/Service/Controller/CustomerController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +24,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "history": [
+    {
+      "state": "OPEN",
+      "reviewState": "AWAITING_REVIEW"
+    }
+  ],
+  "lastFilter": {
+    "state": "OPEN",
+    "reviewState": "AWAITING_REVIEW"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/mdswaley/Telecom-Service-Provisioning-Platform.git",
+    "accountId": "9d517111-56c6-4921-aa59-634643020c1a"
+  }
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -228,8 +245,27 @@
       <option name="project" value="LOCAL" />
       <updated>1784011026030</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Doing crud operation over customer service application">
+      <option name="closed" value="true" />
+      <created>1784034380034</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1784034380034</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Creating auth-service for security purpose" />
@@ -245,7 +281,8 @@
     <MESSAGE value="Adding filter chain and profile setup" />
     <MESSAGE value="Create Refresh Token for continue give access" />
     <MESSAGE value="Add EnableEurekaServer annotation and configure in yaml file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add EnableEurekaServer annotation and configure in yaml file" />
+    <MESSAGE value="Doing crud operation over customer service application" />
+    <option name="LAST_COMMIT_MESSAGE" value="Doing crud operation over customer service application" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
