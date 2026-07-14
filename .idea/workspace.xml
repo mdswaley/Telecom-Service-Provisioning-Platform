@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="Adding filter chain and profile setup">
+    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="Add EnableEurekaServer annotation and configure in yaml file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/Config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/Config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/Controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/Controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/DTO/LoginResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/DTO/LoginResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/Service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/Service/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/Service/JWTService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/Service/JWTService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discovery-server/src/main/java/com/example/discovery/server/DiscoveryServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/main/java/com/example/discovery/server/DiscoveryServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discovery-server/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +204,31 @@
       <option name="project" value="LOCAL" />
       <updated>1783945613750</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Create Refresh Token for continue give access">
+      <option name="closed" value="true" />
+      <created>1784010936806</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1784010936806</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Add EnableEurekaServer annotation and configure in yaml file">
+      <option name="closed" value="true" />
+      <created>1784010988163</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1784010988163</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Add EnableEurekaServer annotation and configure in yaml file">
+      <option name="closed" value="true" />
+      <created>1784011026030</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1784011026030</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -227,7 +243,9 @@
     <MESSAGE value="Test signup" />
     <MESSAGE value="Create login service and controller" />
     <MESSAGE value="Adding filter chain and profile setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding filter chain and profile setup" />
+    <MESSAGE value="Create Refresh Token for continue give access" />
+    <MESSAGE value="Add EnableEurekaServer annotation and configure in yaml file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add EnableEurekaServer annotation and configure in yaml file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
