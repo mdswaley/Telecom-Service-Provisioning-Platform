@@ -67,11 +67,23 @@ public class JWTService {
             return false;
         }
     }
+//
+//    public boolean isTokenExpired(String token){
+//        return extractClaims(token)
+//                .getExpiration()
+//                .before(new Date());
+//    }
 
-    public boolean isTokenExpired(String token){
-        return extractClaims(token)
-                .getExpiration()
-                .before(new Date());
+    public boolean isRefreshTokenValid(String token) {
+        try {
+            Claims claims = extractClaims(token);
+
+            return claims.getExpiration()
+                    .after(new Date());
+
+        } catch (Exception e) {
+            return false;
+        }
     }
 
 

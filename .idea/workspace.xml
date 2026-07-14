@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="Create login service and controller">
+    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="Adding filter chain and profile setup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/Config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/Config/WebSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/Controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/Controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/DTO/LoginResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/DTO/LoginResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/Service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/Service/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/Service/JWTService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/Service/JWTService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/src/main/java/com/example/discovery/server/DiscoveryServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/main/java/com/example/discovery/server/DiscoveryServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +204,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783943809764</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Adding filter chain and profile setup">
+      <option name="closed" value="true" />
+      <created>1783945613750</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1783945613750</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -212,7 +226,8 @@
     <MESSAGE value="Jwt token generated and configured it" />
     <MESSAGE value="Test signup" />
     <MESSAGE value="Create login service and controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create login service and controller" />
+    <MESSAGE value="Adding filter chain and profile setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding filter chain and profile setup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
