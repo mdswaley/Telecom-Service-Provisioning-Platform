@@ -9,6 +9,7 @@ import com.example.auth_service.Exceptions.ResourceNotFound;
 import com.example.auth_service.Repository.UserRepository;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
+import org.jspecify.annotations.Nullable;
 import org.modelmapper.ModelMapper;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -61,4 +62,25 @@ public class AuthService {
                 .build();
     }
 
+    public LoginResponse refreshToken(String refreshToken) {
+
+            if (!jwtService.isRefreshTokenValid(refreshToken)) {
+                throw new RuntimeException("Invalid Refresh Token");
+            }
+
+            Long userId = jwtService.getUserIdFromToken(refreshToken);
+
+            UserEntity user = userRepository.findById(userId)
+                    .orElseThrow(() ->
+                            new RuntimeException("User not found"));
+
+            String accessToken =
+                    jwtService.generateAccessToken(user);
+
+            return LoginResponse.builder()
+                    .accessToken(accessToken)
+                    .refreshToken(refreshToken)
+                    .email(user.getEmail())
+                    .build();
+    }
 }

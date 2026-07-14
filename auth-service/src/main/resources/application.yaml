@@ -22,3 +22,8 @@ server:
 
 jwt:
   secretKey: aiuhfjdsk54384794873nfgn848f#2nisr39jsfb
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
