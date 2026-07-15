@@ -7,6 +7,11 @@ import com.example.Customer.Service.Repository.CustomerRepo;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
+import org.springframework.util.ReflectionUtils;
+
+import java.lang.reflect.Field;
+import java.util.List;
+import java.util.Map;
 
 @Service
 @RequiredArgsConstructor
@@ -33,6 +38,38 @@ public class CustomerService {
         );
 
         return modelMapper.map(customerEntity, CustomerDTO.class);
+    }
+
+    public List<CustomerDTO> getAllCustomer(){
+        List<CustomerEntity> allCus = customerRepo.findAll();
+
+        return allCus.stream()
+                .map(get -> modelMapper.map(get, CustomerDTO.class))
+                .toList();
+    }
+
+
+    public CustomerDTO updateCustomerPartiallyById(String cus_id, Map<String, Object> update){
+        CustomerEntity customerEntity = customerRepo.findByCustomerId(cus_id).orElseThrow(
+                () -> new ResourceNotFoundException("Customer not present with given ID: "+cus_id)
+        );
+
+        update.forEach((field, value) ->{
+            if(field.equalsIgnoreCase("id") || field.equalsIgnoreCase("customerId")){
+                throw new RuntimeException("You don't allow to update IDs");
+            }
+
+            Field fieldToBeUpdate = ReflectionUtils.findField(CustomerEntity.class, field);
+
+            if(fieldToBeUpdate != null){
+                fieldToBeUpdate.setAccessible(true);
+                ReflectionUtils.setField(fieldToBeUpdate, customerEntity, value);
+            }
+        });
+
+        CustomerEntity save = customerRepo.save(customerEntity);
+
+        return modelMapper.map(save, CustomerDTO.class);
     }
 
 

@@ -6,6 +6,10 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+
 
 @RestController
 @RequiredArgsConstructor
@@ -23,5 +27,17 @@ public class CustomerController {
     @GetMapping("/get/{cus_id}")
     public ResponseEntity<CustomerDTO> getCustomer(@PathVariable("cus_id") String cus_id){
         return ResponseEntity.ok(customerService.getCustomerByCusId(cus_id));
+    }
+
+    @GetMapping("/getAllCus")
+    public ResponseEntity<List<CustomerDTO>> getAllCus(){
+        return ResponseEntity.ok(customerService.getAllCustomer());
+    }
+
+    @PatchMapping("/update/{cus_id}")
+    public ResponseEntity<CustomerDTO> updatePartially(@PathVariable("cus_id") String cus_id,
+                                                       @RequestBody Map<String, Object> update){
+        CustomerDTO updateCustomer = customerService.updateCustomerPartiallyById(cus_id, update);
+        return ResponseEntity.ok(updateCustomer);
     }
 }
