@@ -1,9 +1,15 @@
 package com.example.Customer.Service.DTO;
 
-import lombok.Data;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode
+@Builder
 public class CustomerDTO {
+    private Long id;
     private String customerId;
     private String fullName;
     private String email;

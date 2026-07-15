@@ -2,7 +2,6 @@ package com.example.Customer.Service.Controller;
 
 import com.example.Customer.Service.DTO.CustomerDTO;
 import com.example.Customer.Service.Service.CustomerService;
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
