@@ -3,7 +3,7 @@ spring:
     name: Customer-Service
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/telco_auth_db
+    url: jdbc:postgresql://localhost:5432/telco_customer_db
     username: postgres
     password: 2003
 
