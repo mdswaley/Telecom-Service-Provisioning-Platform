@@ -7,13 +7,10 @@ import com.example.auth_service.DTO.RegisterResponse;
 import com.example.auth_service.Entity.UserEntity;
 import com.example.auth_service.Exceptions.ResourceNotFound;
 import com.example.auth_service.Repository.UserRepository;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
-import org.jspecify.annotations.Nullable;
 import org.modelmapper.ModelMapper;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
