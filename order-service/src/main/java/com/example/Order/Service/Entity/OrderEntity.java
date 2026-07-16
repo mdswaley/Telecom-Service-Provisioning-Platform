@@ -16,7 +16,7 @@ public class OrderEntity {
 
     private String orderNumber;
 
-    private Long customerId;
+    private String customerId;
 
     @Enumerated(EnumType.STRING)
     private OrderType orderType;

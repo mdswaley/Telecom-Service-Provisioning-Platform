@@ -1,5 +1,7 @@
 package com.example.Order.Service.Service;
 
+import com.example.Order.Service.Client.CustomerClient;
+import com.example.Order.Service.Client.CustomerResponse;
 import com.example.Order.Service.Entity.OrderEntity;
 import com.example.Order.Service.Entity.OrderStatus;
 import com.example.Order.Service.OrderDTO.OrderRequest;
@@ -15,9 +17,17 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class OrderService {
     private final OrderRepository orderRepository;
+    private final CustomerClient customerClient;
 
 
     public OrderResponse createOrder(OrderRequest request) {
+
+        CustomerResponse customer =
+                customerClient.getCustomer(request.getCustomerId());
+
+        if(customer == null){
+            throw new RuntimeException("Customer is not present with id: "+request.getCustomerId());
+        }
 
         OrderEntity order = OrderEntity.builder()
                 .orderNumber("ORD-" +

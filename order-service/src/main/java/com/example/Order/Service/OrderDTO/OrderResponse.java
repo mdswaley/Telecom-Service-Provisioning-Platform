@@ -10,7 +10,7 @@ import lombok.Data;
 public class OrderResponse {
     private Long id;
     private String orderNumber;
-    private Long customerId;
+    private String customerId;
     private OrderType orderType;
     private OrderStatus status;
 }

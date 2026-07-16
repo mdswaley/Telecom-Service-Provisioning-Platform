@@ -12,7 +12,7 @@ import java.util.Map;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/customer/v2")
+@RequestMapping("/customers/v2")
 public class CustomerController {
 
     private final CustomerService customerService;
@@ -24,7 +24,7 @@ public class CustomerController {
     }
 
     @GetMapping("/get/{cus_id}")
-    public ResponseEntity<CustomerDTO> getCustomer(@PathVariable("cus_id") String cus_id){
+    public ResponseEntity<CustomerDTO> getCustomer(@PathVariable String cus_id){
         return ResponseEntity.ok(customerService.getCustomerByCusId(cus_id));
     }
 

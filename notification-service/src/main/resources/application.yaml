@@ -2,6 +2,20 @@ spring:
   application:
     name: Notification-Service
 
+  datasource:
+    url: jdbc:postgresql://localhost:5432/telco_notification_db
+    username: postgres
+    password: 2003
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+
 server:
   port: 8084
 
