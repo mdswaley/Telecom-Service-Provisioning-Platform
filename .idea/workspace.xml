@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="Create Different types of database for different microservices">
+    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="Using feign client to call orderService to customerService">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/com/example/Customer/Service/Controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/com/example/Customer/Service/Controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/example/Notification/Service/NotificationServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/example/Notification/Service/NotificationServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/example/Order/Service/Entity/OrderEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/Order/Service/Entity/OrderEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/example/Order/Service/OrderDTO/OrderRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/Order/Service/OrderDTO/OrderRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/example/Order/Service/OrderDTO/OrderResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/Order/Service/OrderDTO/OrderResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/example/Order/Service/OrderServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/Order/Service/OrderServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/example/Order/Service/Service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/Order/Service/Service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/example/Order/Service/Client/CustomerClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/Order/Service/Client/CustomerClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/example/Order/Service/Controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/Order/Service/Controller/OrderController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,32 +65,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ApiGatewayApplication.executor": "Run",
-    "Application.AuthServiceApplication.executor": "Run",
-    "Application.CustomerServiceApplication.executor": "Run",
-    "Application.DiscoveryServerApplication.executor": "Run",
-    "Application.NotificationServiceApplication.executor": "Run",
-    "Application.OrderServiceApplication.executor": "Run",
-    "Application.ProvisioningServiceApplication.executor": "Run",
-    "Maven.api-gateway [clean,install].executor": "Run",
-    "Maven.auth-service [clean,install,-DskipTests].executor": "Run",
-    "Maven.auth-service [clean,install].executor": "Run",
-    "Maven.auth-service [clean,spring-boot:run].executor": "Run",
-    "Maven.auth-service [dependency:tree,|,findstr...].executor": "Run",
-    "Maven.auth-service [dependency:tree].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/mdswa/IdeaProjects/Telecom-Service-Provisioning-Platform",
-    "onboarding.tips.debug.path": "C:/Users/mdswa/IdeaProjects/Telecom-Service-Provisioning-Platform/api-gateway/src/main/java/com/example/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.AuthServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CustomerServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DiscoveryServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.NotificationServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.OrderServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ProvisioningServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.api-gateway [clean,install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.auth-service [clean,install,-DskipTests].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.auth-service [clean,install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.auth-service [clean,spring-boot:run].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.auth-service [dependency:tree,|,findstr...].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.auth-service [dependency:tree].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mdswa/IdeaProjects/Telecom-Service-Provisioning-Platform&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/mdswa/IdeaProjects/Telecom-Service-Provisioning-Platform/api-gateway/src/main/java/com/example/Main.java&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.example.Provisioning.Service.Entity" />
@@ -122,13 +117,13 @@
       <command value="mvn  clean spring-boot:run" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.NotificationServiceApplication">
-    <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.api_gateway.ApiGatewayApplication" />
-      <module name="api-gateway" />
+  <component name="RunManager" selected="Application.OrderServiceApplication">
+    <configuration name="CustomerServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.Customer.Service.CustomerServiceApplication" />
+      <module name="Customer-Service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.api_gateway.*" />
+          <option name="PATTERN" value="com.example.Customer.Service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -136,12 +131,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomerServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.Customer.Service.CustomerServiceApplication" />
-      <module name="Customer-Service" />
+    <configuration name="DiscoveryServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.discovery.server.DiscoveryServerApplication" />
+      <module name="discovery-server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.Customer.Service.*" />
+          <option name="PATTERN" value="com.example.discovery.server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -190,11 +185,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.OrderServiceApplication" />
+        <item itemvalue="Application.CustomerServiceApplication" />
+        <item itemvalue="Application.DiscoveryServerApplication" />
         <item itemvalue="Application.NotificationServiceApplication" />
         <item itemvalue="Application.ProvisioningServiceApplication" />
-        <item itemvalue="Application.OrderServiceApplication" />
-        <item itemvalue="Application.ApiGatewayApplication" />
-        <item itemvalue="Application.CustomerServiceApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -390,7 +385,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784213568119</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Using feign client to call orderService to customerService">
+      <option name="closed" value="true" />
+      <created>1784215262120</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1784215262120</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -425,7 +428,8 @@
     <MESSAGE value="Create order entity" />
     <MESSAGE value="Fixed the issue where the Spring Boot version was not compatible with the Spring Cloud Eureka version" />
     <MESSAGE value="Create Different types of database for different microservices" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create Different types of database for different microservices" />
+    <MESSAGE value="Using feign client to call orderService to customerService" />
+    <option name="LAST_COMMIT_MESSAGE" value="Using feign client to call orderService to customerService" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

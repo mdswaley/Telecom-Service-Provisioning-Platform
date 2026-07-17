@@ -1,5 +1,7 @@
 package com.example.Order.Service.Controller;
 
+import com.example.Order.Service.Client.CustomerClient;
+import com.example.Order.Service.Client.CustomerResponse;
 import com.example.Order.Service.OrderDTO.OrderRequest;
 import com.example.Order.Service.OrderDTO.OrderResponse;
 import com.example.Order.Service.Service.OrderService;
@@ -11,9 +13,11 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
+@RequestMapping("/orders")
 public class OrderController {
 
     private final OrderService orderService;
+    private final CustomerClient customerClient;
 
     @PostMapping
     public ResponseEntity<OrderResponse> createOrder(
@@ -39,5 +43,10 @@ public class OrderController {
         return ResponseEntity.ok(
                 orderService.getAllOrders()
         );
+    }
+
+    @GetMapping("/test/{customerId}")
+    public CustomerResponse testFeign(@PathVariable String customerId){
+        return customerClient.getCustomer(customerId);
     }
 }
