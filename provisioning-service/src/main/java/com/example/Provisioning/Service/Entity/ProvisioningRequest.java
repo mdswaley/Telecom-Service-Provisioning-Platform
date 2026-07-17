@@ -14,12 +14,15 @@ public class ProvisioningRequest{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String provisioningId;
+
     private String orderNumber;
 
-    private Long customerId;
+    private String simNumber;
+
+    private String msisdn;
 
     @Enumerated(EnumType.STRING)
     private ProvisioningStatus status;
 
-    private String remarks;
 }
