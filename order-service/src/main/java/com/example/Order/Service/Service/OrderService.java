@@ -25,8 +25,8 @@ public class OrderService {
         CustomerResponse customer =
                 customerClient.getCustomer(request.getCustomerId());
 
-        if(customer == null){
-            throw new RuntimeException("Customer is not present with id: "+request.getCustomerId());
+        if (customer == null) {
+            throw new RuntimeException("Customer is not present with id: " + request.getCustomerId());
         }
 
         OrderEntity order = OrderEntity.builder()
@@ -71,5 +71,15 @@ public class OrderService {
                 .orderType(order.getOrderType())
                 .status(order.getStatus())
                 .build();
+    }
+
+    public void updateOrderStatus(String orderNum, OrderStatus orderStatus) {
+        OrderEntity order = orderRepository.findByOrderNumber(orderNum).orElseThrow(
+                () -> new RuntimeException("Order not found")
+        );
+
+        order.setStatus(orderStatus);
+
+        orderRepository.save(order);
     }
 }

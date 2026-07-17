@@ -2,6 +2,7 @@ package com.example.Order.Service.Controller;
 
 import com.example.Order.Service.Client.CustomerClient;
 import com.example.Order.Service.Client.CustomerResponse;
+import com.example.Order.Service.Entity.OrderStatus;
 import com.example.Order.Service.OrderDTO.OrderRequest;
 import com.example.Order.Service.OrderDTO.OrderResponse;
 import com.example.Order.Service.Service.OrderService;
@@ -43,6 +44,12 @@ public class OrderController {
         return ResponseEntity.ok(
                 orderService.getAllOrders()
         );
+    }
+
+    @PatchMapping("/{orderNumber}/status")
+    public ResponseEntity<String> updateStatus(@PathVariable String orderNumber, @RequestParam OrderStatus status) {
+        orderService.updateOrderStatus(orderNumber, status);
+        return ResponseEntity.ok("Status Updated");
     }
 
     @GetMapping("/test/{customerId}")
