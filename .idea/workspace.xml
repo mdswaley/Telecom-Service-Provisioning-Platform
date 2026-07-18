@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="Adding Dependency and connect Order-service to Provisioning-service">
+    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="Create service method for provision request and generate simNum and msisdn">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/Controller/ProvisioningController.java" beforeDir="false" afterPath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/Controller/ProvisioningController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/Entity/ProvisioningRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/Entity/ProvisioningEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/Repository/ProvisioningRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/Repository/ProvisioningRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/Service/ProvisioningService.java" beforeDir="false" afterPath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/Service/ProvisioningService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/example/Order/Service/Controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/Order/Service/Controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/Client/OrderClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/Client/OrderClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/ProvisioningServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/ProvisioningServiceApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +117,7 @@
       <command value="mvn  clean spring-boot:run" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.CustomerServiceApplication">
+  <component name="RunManager" selected="Application.ProvisioningServiceApplication">
     <configuration name="CustomerServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.Customer.Service.CustomerServiceApplication" />
       <module name="Customer-Service" />
@@ -186,11 +185,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CustomerServiceApplication" />
+        <item itemvalue="Application.ProvisioningServiceApplication" />
         <item itemvalue="Application.OrderServiceApplication" />
+        <item itemvalue="Application.CustomerServiceApplication" />
         <item itemvalue="Application.DiscoveryServerApplication" />
         <item itemvalue="Application.NotificationServiceApplication" />
-        <item itemvalue="Application.ProvisioningServiceApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -426,7 +425,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784293240553</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Create service method for provision request and generate simNum and msisdn">
+      <option name="closed" value="true" />
+      <created>1784353117570</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1784353117570</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -441,7 +448,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Creating auth-service for security purpose" />
     <MESSAGE value="Adding api-gateway" />
     <MESSAGE value="Adding all required microservices" />
     <MESSAGE value="create entity and DTOs for authService" />
@@ -466,7 +472,8 @@
     <MESSAGE value="Add update Order Status" />
     <MESSAGE value="change provisioning Entity fields" />
     <MESSAGE value="Adding Dependency and connect Order-service to Provisioning-service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding Dependency and connect Order-service to Provisioning-service" />
+    <MESSAGE value="Create service method for provision request and generate simNum and msisdn" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create service method for provision request and generate simNum and msisdn" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
