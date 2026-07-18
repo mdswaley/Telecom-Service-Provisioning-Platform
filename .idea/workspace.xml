@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="Create service method for provision request and generate simNum and msisdn">
+    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="update status of orders and create provisioning table">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/example/Order/Service/Controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/Order/Service/Controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/Client/OrderClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/Client/OrderClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/ProvisioningServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/ProvisioningServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/Service/ProvisioningService.java" beforeDir="false" afterPath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/Service/ProvisioningService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +18,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Exception" />
-        <option value="Enum" />
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -92,6 +91,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.Provisioning.Service.DTO" />
+      <recent name="com.example.Provisioning.DTO" />
       <recent name="com.example.Provisioning.Service.Entity" />
       <recent name="com.example.Order.Service.Entity" />
       <recent name="com.example.auth_service.Enums" />
@@ -186,10 +187,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.ProvisioningServiceApplication" />
+        <item itemvalue="Application.NotificationServiceApplication" />
         <item itemvalue="Application.OrderServiceApplication" />
         <item itemvalue="Application.CustomerServiceApplication" />
         <item itemvalue="Application.DiscoveryServerApplication" />
-        <item itemvalue="Application.NotificationServiceApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -433,7 +434,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784353117570</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="update status of orders and create provisioning table">
+      <option name="closed" value="true" />
+      <created>1784357282902</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1784357282903</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -448,7 +457,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adding api-gateway" />
     <MESSAGE value="Adding all required microservices" />
     <MESSAGE value="create entity and DTOs for authService" />
     <MESSAGE value="Adding modelMapper dependency" />
@@ -473,7 +481,8 @@
     <MESSAGE value="change provisioning Entity fields" />
     <MESSAGE value="Adding Dependency and connect Order-service to Provisioning-service" />
     <MESSAGE value="Create service method for provision request and generate simNum and msisdn" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create service method for provision request and generate simNum and msisdn" />
+    <MESSAGE value="update status of orders and create provisioning table" />
+    <option name="LAST_COMMIT_MESSAGE" value="update status of orders and create provisioning table" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

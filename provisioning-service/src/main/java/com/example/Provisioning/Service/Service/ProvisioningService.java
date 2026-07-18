@@ -1,8 +1,11 @@
 package com.example.Provisioning.Service.Service;
 
+import com.example.Provisioning.Service.Client.NotificationClient;
 import com.example.Provisioning.Service.Client.OrderClient;
 import com.example.Provisioning.Service.ClientResponse.OrderResponse;
 import com.example.Provisioning.Service.ClientResponse.OrderStatus;
+import com.example.Provisioning.Service.DTO.NotificationRequest;
+import com.example.Provisioning.Service.DTO.NotificationResponse;
 import com.example.Provisioning.Service.DTO.ProvisioningRequest;
 import com.example.Provisioning.Service.Entity.ProvisioningEntity;
 import com.example.Provisioning.Service.DTO.ProvisioningResponse;
@@ -22,6 +25,7 @@ public class ProvisioningService {
     private final ProvisioningRepository repository;
     private final OrderClient orderClient;
     private final ModelMapper modelMapper;
+    private final NotificationClient notificationClient;
 
     public ProvisioningEntity processOrder(ProvisioningEntity request) {
         request.setStatus(ProvisioningStatus.IN_PROGRESS);
@@ -55,6 +59,18 @@ public class ProvisioningService {
         ProvisioningEntity saved = repository.save(entity);
 
         orderClient.updateStatus(order.getOrderNumber(), OrderStatus.COMPLETED);
+
+        NotificationRequest notificationRequest =
+                NotificationRequest.builder()
+                        .orderNumber(order.getOrderNumber())
+                        .customerId(order.getCustomerId())
+                        .message("SIM Activated Successfully")
+                        .build();
+
+        System.out.println("Calling Notification");
+        NotificationResponse res = notificationClient.sendNotification(notificationRequest);
+        System.out.println(res);
+
         return modelMapper.map(saved, ProvisioningResponse.class);
     }
 
