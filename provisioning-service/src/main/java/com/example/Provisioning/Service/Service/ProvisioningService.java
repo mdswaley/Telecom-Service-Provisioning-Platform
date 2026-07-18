@@ -67,9 +67,9 @@ public class ProvisioningService {
                         .message("SIM Activated Successfully")
                         .build();
 
-        System.out.println("Calling Notification");
-        NotificationResponse res = notificationClient.sendNotification(notificationRequest);
-        System.out.println(res);
+//        System.out.println("Calling Notification");
+       notificationClient.sendNotification(notificationRequest);
+//        System.out.println(res);
 
         return modelMapper.map(saved, ProvisioningResponse.class);
     }
