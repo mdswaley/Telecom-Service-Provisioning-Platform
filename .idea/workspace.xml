@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="change provisioning Entity fields">
+    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="Adding Dependency and connect Order-service to Provisioning-service">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provisioning-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provisioning-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/Controller/ProvisioningController.java" beforeDir="false" afterPath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/Controller/ProvisioningController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/Entity/ProvisioningRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/Entity/ProvisioningEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/Repository/ProvisioningRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/Repository/ProvisioningRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/Service/ProvisioningService.java" beforeDir="false" afterPath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/Service/ProvisioningService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,6 +105,7 @@
       <recent name="C:\Users\mdswa\IdeaProjects\Telecom-Service-Provisioning-Platform\api-gateway\src\main\java\com\example\api_gateway" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.Provisioning.Service.ClientResponse" />
       <recent name="com.example.Order.Service.Client" />
     </key>
   </component>
@@ -414,7 +418,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784292521140</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Adding Dependency and connect Order-service to Provisioning-service">
+      <option name="closed" value="true" />
+      <created>1784293240553</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1784293240553</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -453,7 +465,8 @@
     <MESSAGE value="Get Customer from order-service through feignClient" />
     <MESSAGE value="Add update Order Status" />
     <MESSAGE value="change provisioning Entity fields" />
-    <option name="LAST_COMMIT_MESSAGE" value="change provisioning Entity fields" />
+    <MESSAGE value="Adding Dependency and connect Order-service to Provisioning-service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding Dependency and connect Order-service to Provisioning-service" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
