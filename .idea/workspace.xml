@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="Successfully sent message to notification service log">
+    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="Modify ProvisioningController">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/example/Order/Service/Service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/Order/Service/Service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provisioning-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provisioning-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/Controller/ProvisioningController.java" beforeDir="false" afterPath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/Controller/ProvisioningController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/Service/ProvisioningService.java" beforeDir="false" afterPath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/Service/ProvisioningService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provisioning-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/provisioning-service/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +19,7 @@
         <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -125,7 +117,7 @@
       <command value="mvn  clean spring-boot:run" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.ProvisioningServiceApplication">
+  <component name="RunManager" selected="Application.NotificationServiceApplication">
     <configuration name="CustomerServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.Customer.Service.CustomerServiceApplication" />
       <module name="Customer-Service" />
@@ -193,10 +185,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ProvisioningServiceApplication" />
         <item itemvalue="Application.NotificationServiceApplication" />
-        <item itemvalue="Application.OrderServiceApplication" />
         <item itemvalue="Application.CustomerServiceApplication" />
+        <item itemvalue="Application.OrderServiceApplication" />
+        <item itemvalue="Application.ProvisioningServiceApplication" />
         <item itemvalue="Application.DiscoveryServerApplication" />
       </list>
     </recent_temporary>
@@ -465,7 +457,23 @@
       <option name="project" value="LOCAL" />
       <updated>1784361257410</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Add kafka in order and provisioning service">
+      <option name="closed" value="true" />
+      <created>1784433760389</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1784433760389</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Modify ProvisioningController">
+      <option name="closed" value="true" />
+      <created>1784433930250</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1784433930250</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -480,8 +488,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adding modelMapper dependency" />
-    <MESSAGE value="create service, repository, config and custom exception" />
     <MESSAGE value="Adding WebSecurityConfig" />
     <MESSAGE value="Jwt token generated and configured it" />
     <MESSAGE value="Test signup" />
@@ -505,7 +511,9 @@
     <MESSAGE value="update status of orders and create provisioning table" />
     <MESSAGE value="Successfully sent message to notification service" />
     <MESSAGE value="Successfully sent message to notification service log" />
-    <option name="LAST_COMMIT_MESSAGE" value="Successfully sent message to notification service log" />
+    <MESSAGE value="Add kafka in order and provisioning service" />
+    <MESSAGE value="Modify ProvisioningController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modify ProvisioningController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
