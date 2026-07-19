@@ -19,12 +19,9 @@ public class ProvisioningController {
     private final ProvisioningService provisioningService;
 
     @PostMapping("/process")
-    public ResponseEntity<ProvisioningEntity> process(
-            @RequestBody ProvisioningEntity request) {
-
-        return ResponseEntity.ok(
-                provisioningService.processOrder(request)
-        );
+    public ResponseEntity<String> process(@RequestBody String orderNumber) {
+        provisioningService.processOrder(orderNumber);
+        return ResponseEntity.ok("Provisioning completed successfully");
     }
 
     @PostMapping
