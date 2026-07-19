@@ -8,6 +8,7 @@ import com.example.Order.Service.OrderDTO.OrderRequest;
 import com.example.Order.Service.OrderDTO.OrderResponse;
 import com.example.Order.Service.Repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,6 +19,7 @@ import java.util.UUID;
 public class OrderService {
     private final OrderRepository orderRepository;
     private final CustomerClient customerClient;
+    private final KafkaTemplate<String,String> kafkaTemplate;
 
 
     public OrderResponse createOrder(OrderRequest request) {
@@ -38,6 +40,10 @@ public class OrderService {
                 .build();
 
         OrderEntity savedOrder = orderRepository.save(order);
+
+        kafkaTemplate.send(
+                "provisioning-request",
+                savedOrder.getOrderNumber());
 
         return mapToResponse(savedOrder);
     }

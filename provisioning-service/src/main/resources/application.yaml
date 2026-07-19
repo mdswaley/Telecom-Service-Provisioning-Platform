@@ -23,3 +23,14 @@ eureka:
 
 server:
   port: 8087
+
+
+#  Kafka Configuration
+  kafka:
+    bootstrap-servers: localhost:9092
+
+    consumer:
+      group-id: provisioning-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer

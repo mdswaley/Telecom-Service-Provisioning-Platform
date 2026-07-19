@@ -27,9 +27,23 @@ public class ProvisioningService {
     private final ModelMapper modelMapper;
     private final NotificationClient notificationClient;
 
-    public ProvisioningEntity processOrder(ProvisioningEntity request) {
-        request.setStatus(ProvisioningStatus.IN_PROGRESS);
-        return repository.save(request);
+    public void processOrder(String orderNumber) {
+        OrderResponse order = orderClient.getOrder(orderNumber);
+
+        ProvisioningEntity entity = ProvisioningEntity.builder()
+                .provisioningId(
+                        "PROV-" + UUID.randomUUID()
+                                .toString()
+                                .substring(0, 8))
+                        .orderNumber(order.getOrderNumber())
+                        .simNumber(generateSimNumber())
+                        .msisdn(generateMsisdn())
+                        .status(ProvisioningStatus.COMPLETED)
+                        .build();
+
+        repository.save(entity);
+
+        orderClient.updateStatus(order.getOrderNumber(), OrderStatus.COMPLETED);
     }
 
 
