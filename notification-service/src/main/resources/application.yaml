@@ -15,11 +15,41 @@ spring:
       hibernate:
         format_sql: true
 
+  # Kafka configuration
+  kafka:
+    consumer:
+      group-id: notification-group
+      auto-offset-reset: earliest
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+
+      properties:
+        spring.json.trusted.packages: "*"
+
+
+  # send real time email for notification about sim information
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: j40064535@gmail.com
+    password: hxyy goft qjbl yeul
+
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
 
 server:
   port: 8084
 
+# Eureka server for communication with microservices
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
+
+
+
+
