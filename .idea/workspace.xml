@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="sent notification message according to orderType">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/example/Notification/Service/Config/NotificationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/example/Notification/Service/Config/NotificationConfig.java" afterDir="false" />
+    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="Successfully sent mail to the customer regarding there issue">
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/example/Notification/Service/Client/CustomerResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/example/Notification/Service/Client/CustomerResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/example/Notification/Service/Service/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/example/Notification/Service/Service/NotificationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provisioning-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/provisioning-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/example/Order/Service/Controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/Order/Service/Controller/OrderController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,10 +18,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Exception" />
-        <option value="Interface" />
         <option value="Enum" />
         <option value="Dockerfile" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -495,7 +492,23 @@
       <option name="project" value="LOCAL" />
       <updated>1784549043492</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="add dependency for sending real-time email to the customer">
+      <option name="closed" value="true" />
+      <created>1784558997498</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1784558997498</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Successfully sent mail to the customer regarding there issue">
+      <option name="closed" value="true" />
+      <created>1784559045999</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1784559045999</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -510,8 +523,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Test signup" />
-    <MESSAGE value="Create login service and controller" />
     <MESSAGE value="Adding filter chain and profile setup" />
     <MESSAGE value="Create Refresh Token for continue give access" />
     <MESSAGE value="Add EnableEurekaServer annotation and configure in yaml file" />
@@ -535,7 +546,9 @@
     <MESSAGE value="Modify ProvisioningController" />
     <MESSAGE value="Added Docker Compose configuration for Kafka and Zookeeper container setup. After order creation, the order status is automatically changing to COMPLETED instead of remaining in PROVISIONING state." />
     <MESSAGE value="sent notification message according to orderType" />
-    <option name="LAST_COMMIT_MESSAGE" value="sent notification message according to orderType" />
+    <MESSAGE value="add dependency for sending real-time email to the customer" />
+    <MESSAGE value="Successfully sent mail to the customer regarding there issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="Successfully sent mail to the customer regarding there issue" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

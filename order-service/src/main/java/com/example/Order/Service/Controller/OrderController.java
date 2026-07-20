@@ -21,29 +21,21 @@ public class OrderController {
     private final CustomerClient customerClient;
 
     @PostMapping
-    public ResponseEntity<OrderResponse> createOrder(
-            @RequestBody OrderRequest request) {
+    public ResponseEntity<OrderResponse> createOrder(@RequestBody OrderRequest request) {
 
-        return ResponseEntity.ok(
-                orderService.createOrder(request)
-        );
+        return ResponseEntity.ok(orderService.createOrder(request));
     }
 
     @GetMapping("/{orderNumber}")
-    public ResponseEntity<OrderResponse> getOrder(
-            @PathVariable String orderNumber) {
+    public ResponseEntity<OrderResponse> getOrder(@PathVariable String orderNumber) {
 
-        return ResponseEntity.ok(
-                orderService.getOrder(orderNumber)
-        );
+        return ResponseEntity.ok(orderService.getOrder(orderNumber));
     }
 
     @GetMapping
     public ResponseEntity<List<OrderResponse>> getAllOrders() {
 
-        return ResponseEntity.ok(
-                orderService.getAllOrders()
-        );
+        return ResponseEntity.ok(orderService.getAllOrders());
     }
 
     @PutMapping("/{orderNumber}/status")
