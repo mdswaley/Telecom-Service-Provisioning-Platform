@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="Added Docker Compose configuration for Kafka and Zookeeper container setup. After order creation, the order status is automatically changing to COMPLETED instead of remaining in PROVISIONING state.">
+    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="sent notification message according to orderType">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/Service/ProvisioningService.java" beforeDir="false" afterPath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/Service/ProvisioningService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/example/Notification/Service/Config/NotificationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/example/Notification/Service/Config/NotificationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/example/Notification/Service/Service/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/example/Notification/Service/Service/NotificationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisioning-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/provisioning-service/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +23,8 @@
         <option value="Exception" />
         <option value="Interface" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="Dockerfile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -105,6 +109,7 @@
       <recent name="C:\Users\mdswa\IdeaProjects\Telecom-Service-Provisioning-Platform\api-gateway\src\main\java\com\example\api_gateway" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.Notification.Service.Client" />
       <recent name="com.example.Provisioning.Service.ClientResponse" />
       <recent name="com.example.Order.Service.Client" />
     </key>
@@ -118,7 +123,7 @@
       <command value="mvn  clean spring-boot:run" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.ProvisioningServiceApplication">
+  <component name="RunManager" selected="Application.NotificationServiceApplication">
     <configuration name="CustomerServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.Customer.Service.CustomerServiceApplication" />
       <module name="Customer-Service" />
@@ -186,10 +191,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ProvisioningServiceApplication" />
-        <item itemvalue="Application.OrderServiceApplication" />
-        <item itemvalue="Application.CustomerServiceApplication" />
         <item itemvalue="Application.NotificationServiceApplication" />
+        <item itemvalue="Application.CustomerServiceApplication" />
+        <item itemvalue="Application.OrderServiceApplication" />
+        <item itemvalue="Application.ProvisioningServiceApplication" />
         <item itemvalue="Application.DiscoveryServerApplication" />
       </list>
     </recent_temporary>
@@ -482,7 +487,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784436003475</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="sent notification message according to orderType">
+      <option name="closed" value="true" />
+      <created>1784549043491</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1784549043492</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -497,7 +510,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Jwt token generated and configured it" />
     <MESSAGE value="Test signup" />
     <MESSAGE value="Create login service and controller" />
     <MESSAGE value="Adding filter chain and profile setup" />
@@ -522,7 +534,8 @@
     <MESSAGE value="Add kafka in order and provisioning service" />
     <MESSAGE value="Modify ProvisioningController" />
     <MESSAGE value="Added Docker Compose configuration for Kafka and Zookeeper container setup. After order creation, the order status is automatically changing to COMPLETED instead of remaining in PROVISIONING state." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Docker Compose configuration for Kafka and Zookeeper container setup. After order creation, the order status is automatically changing to COMPLETED instead of remaining in PROVISIONING state." />
+    <MESSAGE value="sent notification message according to orderType" />
+    <option name="LAST_COMMIT_MESSAGE" value="sent notification message according to orderType" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,5 +1,7 @@
 package com.example.Notification.Service.Service;
 
+import com.example.Notification.Service.Client.CustomerClient;
+import com.example.Notification.Service.Client.CustomerResponse;
 import com.example.Notification.Service.DTO.NotificationRequest;
 import com.example.Notification.Service.DTO.NotificationResponse;
 import com.example.Notification.Service.DTO.NotificationStatus;
@@ -16,6 +18,8 @@ import java.util.List;
 public class NotificationService {
     private final NotificationRepo repository;
     private final ModelMapper modelMapper;
+    private final CustomerClient customerClient;
+    private final EmailService emailService;
 
     public NotificationResponse sendNotification(NotificationRequest request) {
 
@@ -27,6 +31,11 @@ public class NotificationService {
                         .build();
 
         NotificationEntity saved = repository.save(entity);
+
+        CustomerResponse customer = customerClient.getCustomer(request.getCustomerId());
+        emailService.sendEmail(customer.getEmail(),
+               saved.getMessage(),
+                request.getMessage());
 
         return modelMapper.map(saved, NotificationResponse.class);
     }
