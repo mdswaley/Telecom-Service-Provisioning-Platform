@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="Modify ProvisioningController">
+    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="Added Docker Compose configuration for Kafka and Zookeeper container setup. After order creation, the order status is automatically changing to COMPLETED instead of remaining in PROVISIONING state.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/Service/ProvisioningService.java" beforeDir="false" afterPath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/Service/ProvisioningService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +118,7 @@
       <command value="mvn  clean spring-boot:run" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.NotificationServiceApplication">
+  <component name="RunManager" selected="Application.ProvisioningServiceApplication">
     <configuration name="CustomerServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.Customer.Service.CustomerServiceApplication" />
       <module name="Customer-Service" />
@@ -185,10 +186,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.NotificationServiceApplication" />
-        <item itemvalue="Application.CustomerServiceApplication" />
-        <item itemvalue="Application.OrderServiceApplication" />
         <item itemvalue="Application.ProvisioningServiceApplication" />
+        <item itemvalue="Application.OrderServiceApplication" />
+        <item itemvalue="Application.CustomerServiceApplication" />
+        <item itemvalue="Application.NotificationServiceApplication" />
         <item itemvalue="Application.DiscoveryServerApplication" />
       </list>
     </recent_temporary>
@@ -473,7 +474,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784433930250</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Added Docker Compose configuration for Kafka and Zookeeper container setup. After order creation, the order status is automatically changing to COMPLETED instead of remaining in PROVISIONING state.">
+      <option name="closed" value="true" />
+      <created>1784436003474</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1784436003475</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -488,7 +497,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adding WebSecurityConfig" />
     <MESSAGE value="Jwt token generated and configured it" />
     <MESSAGE value="Test signup" />
     <MESSAGE value="Create login service and controller" />
@@ -513,7 +521,8 @@
     <MESSAGE value="Successfully sent message to notification service log" />
     <MESSAGE value="Add kafka in order and provisioning service" />
     <MESSAGE value="Modify ProvisioningController" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modify ProvisioningController" />
+    <MESSAGE value="Added Docker Compose configuration for Kafka and Zookeeper container setup. After order creation, the order status is automatically changing to COMPLETED instead of remaining in PROVISIONING state." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Docker Compose configuration for Kafka and Zookeeper container setup. After order creation, the order status is automatically changing to COMPLETED instead of remaining in PROVISIONING state." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -4,6 +4,7 @@ import com.example.Provisioning.Service.Client.NotificationClient;
 import com.example.Provisioning.Service.Client.OrderClient;
 import com.example.Provisioning.Service.ClientResponse.OrderResponse;
 import com.example.Provisioning.Service.ClientResponse.OrderStatus;
+import com.example.Provisioning.Service.ClientResponse.OrderType;
 import com.example.Provisioning.Service.DTO.NotificationRequest;
 import com.example.Provisioning.Service.DTO.NotificationResponse;
 import com.example.Provisioning.Service.DTO.ProvisioningRequest;
@@ -78,7 +79,7 @@ public class ProvisioningService {
                 NotificationRequest.builder()
                         .orderNumber(order.getOrderNumber())
                         .customerId(order.getCustomerId())
-                        .message("SIM Activated Successfully")
+                        .message(getNotificationMessage(order.getOrderType()))
                         .build();
 
 //        System.out.println("Calling Notification");
@@ -86,6 +87,26 @@ public class ProvisioningService {
 //        System.out.println(res);
 
         return modelMapper.map(saved, ProvisioningResponse.class);
+    }
+
+    private String getNotificationMessage(OrderType orderType){
+        return switch (orderType) {
+
+            case NEW_SIM ->
+                    "Your new SIM has been activated successfully.";
+
+            case PORT_IN ->
+                    "Your mobile number has been successfully ported to our network.";
+
+            case SIM_REPLACEMENT ->
+                    "Your replacement SIM has been activated successfully.";
+
+            case ROAMING ->
+                    "International roaming service has been activated successfully.";
+
+            case DATA_PACK ->
+                    "Your data pack has been activated successfully.";
+        };
     }
 
     private String generateSimNumber() {
