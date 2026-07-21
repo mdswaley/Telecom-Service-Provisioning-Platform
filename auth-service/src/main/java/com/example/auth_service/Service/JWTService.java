@@ -28,7 +28,7 @@ public class JWTService {
                 .claim("userId", user.getId())
                 .claim("role", user.getUserRole().name())
                 .issuedAt(new Date())
-                .expiration(new Date(System.currentTimeMillis() + 1000L * 60 * 15))
+                .expiration(new Date(System.currentTimeMillis() + 1000L * 60 * 15)) // valid 15 min
                 .signWith(getSecretKey())
                 .compact();
     }
@@ -38,7 +38,7 @@ public class JWTService {
         return Jwts.builder()
                 .subject(user.getId().toString())
                 .issuedAt(new Date())
-                .expiration(new Date(System.currentTimeMillis() + 1000L*60*2)) //expired after 10min
+                .expiration(new Date(System.currentTimeMillis() + 1000L* 60 * 60 * 24 * 7)) //valid till 7 days
                 .signWith(getSecretKey())
                 .compact();
     }
