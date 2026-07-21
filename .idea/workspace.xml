@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="Added API Gateway to route requests from multiple microservices through a single entry point (port).">
+    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="Use JWT authentication for every microservice through api-gateway">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/Service/JWTService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/Service/JWTService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/api_gateway/Filter/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/api_gateway/Filter/JwtAuthenticationFilter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +19,8 @@
         <option value="Exception" />
         <option value="Enum" />
         <option value="Dockerfile" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -110,11 +108,11 @@
       <recent name="C:\Users\mdswa\IdeaProjects\Telecom-Service-Provisioning-Platform\api-gateway\src\main\java\com\example\api_gateway" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.api_gateway.Advice" />
       <recent name="com.example.api_gateway.Config" />
       <recent name="com.example.api_gateway.Service" />
       <recent name="com.example.Notification.Service.Client" />
       <recent name="com.example.Provisioning.Service.ClientResponse" />
-      <recent name="com.example.Order.Service.Client" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -530,7 +528,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784607046703</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Use JWT authentication for every microservice through api-gateway">
+      <option name="closed" value="true" />
+      <created>1784613261165</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1784613261166</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -545,7 +551,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add EnableEurekaServer annotation and configure in yaml file" />
     <MESSAGE value="Doing crud operation over customer service application" />
     <MESSAGE value="Get Customer by id implementation" />
     <MESSAGE value="Get CustomerById" />
@@ -570,7 +575,8 @@
     <MESSAGE value="Successfully sent mail to the customer regarding there issue" />
     <MESSAGE value="Proper message body for email to customer" />
     <MESSAGE value="Added API Gateway to route requests from multiple microservices through a single entry point (port)." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added API Gateway to route requests from multiple microservices through a single entry point (port)." />
+    <MESSAGE value="Use JWT authentication for every microservice through api-gateway" />
+    <option name="LAST_COMMIT_MESSAGE" value="Use JWT authentication for every microservice through api-gateway" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
