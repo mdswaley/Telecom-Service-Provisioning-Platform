@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="Successfully sent mail to the customer regarding there issue">
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/example/Notification/Service/Client/CustomerResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/example/Notification/Service/Client/CustomerResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/example/Notification/Service/Service/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/example/Notification/Service/Service/NotificationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/example/Order/Service/Controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/Order/Service/Controller/OrderController.java" afterDir="false" />
+    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="Added API Gateway to route requests from multiple microservices through a single entry point (port).">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,13 +122,13 @@
       <command value="mvn  clean spring-boot:run" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.NotificationServiceApplication">
-    <configuration name="CustomerServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.Customer.Service.CustomerServiceApplication" />
-      <module name="Customer-Service" />
+  <component name="RunManager" selected="Application.AuthServiceApplication">
+    <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.api_gateway.ApiGatewayApplication" />
+      <module name="api-gateway" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.Customer.Service.*" />
+          <option name="PATTERN" value="com.example.api_gateway.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -134,12 +136,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DiscoveryServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.discovery.server.DiscoveryServerApplication" />
-      <module name="discovery-server" />
+    <configuration name="AuthServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.auth_service.AuthServiceApplication" />
+      <module name="auth-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.discovery.server.*" />
+          <option name="PATTERN" value="com.example.auth_service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomerServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.Customer.Service.CustomerServiceApplication" />
+      <module name="Customer-Service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.Customer.Service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -173,26 +188,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProvisioningServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.Provisioning.Service.ProvisioningServiceApplication" />
-      <module name="Provisioning-Service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.Provisioning.Service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.NotificationServiceApplication" />
+        <item itemvalue="Application.AuthServiceApplication" />
+        <item itemvalue="Application.ApiGatewayApplication" />
         <item itemvalue="Application.CustomerServiceApplication" />
+        <item itemvalue="Application.NotificationServiceApplication" />
         <item itemvalue="Application.OrderServiceApplication" />
-        <item itemvalue="Application.ProvisioningServiceApplication" />
-        <item itemvalue="Application.DiscoveryServerApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -508,7 +510,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784559045999</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Proper message body for email to customer">
+      <option name="closed" value="true" />
+      <created>1784560028413</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1784560028413</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -523,7 +533,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adding filter chain and profile setup" />
     <MESSAGE value="Create Refresh Token for continue give access" />
     <MESSAGE value="Add EnableEurekaServer annotation and configure in yaml file" />
     <MESSAGE value="Doing crud operation over customer service application" />
@@ -548,7 +557,8 @@
     <MESSAGE value="sent notification message according to orderType" />
     <MESSAGE value="add dependency for sending real-time email to the customer" />
     <MESSAGE value="Successfully sent mail to the customer regarding there issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="Successfully sent mail to the customer regarding there issue" />
+    <MESSAGE value="Proper message body for email to customer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Proper message body for email to customer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
