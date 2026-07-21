@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="Use JWT authentication for every microservice through api-gateway">
+    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="adding advisor for global exception handler">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/api_gateway/Filter/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/api_gateway/Filter/JwtAuthenticationFilter.java" afterDir="false" />
     </list>
@@ -138,12 +138,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomerServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.Customer.Service.CustomerServiceApplication" />
-      <module name="Customer-Service" />
+    <configuration name="AuthServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.auth_service.AuthServiceApplication" />
+      <module name="auth-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.Customer.Service.*" />
+          <option name="PATTERN" value="com.example.auth_service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -193,10 +193,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.ApiGatewayApplication" />
+        <item itemvalue="Application.AuthServiceApplication" />
         <item itemvalue="Application.ProvisioningServiceApplication" />
         <item itemvalue="Application.OrderServiceApplication" />
         <item itemvalue="Application.NotificationServiceApplication" />
-        <item itemvalue="Application.CustomerServiceApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -536,7 +536,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784613261166</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="adding advisor for global exception handler">
+      <option name="closed" value="true" />
+      <created>1784614982222</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1784614982222</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -551,7 +559,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Doing crud operation over customer service application" />
     <MESSAGE value="Get Customer by id implementation" />
     <MESSAGE value="Get CustomerById" />
     <MESSAGE value="update customer partially by using customer id" />
@@ -576,7 +583,8 @@
     <MESSAGE value="Proper message body for email to customer" />
     <MESSAGE value="Added API Gateway to route requests from multiple microservices through a single entry point (port)." />
     <MESSAGE value="Use JWT authentication for every microservice through api-gateway" />
-    <option name="LAST_COMMIT_MESSAGE" value="Use JWT authentication for every microservice through api-gateway" />
+    <MESSAGE value="adding advisor for global exception handler" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding advisor for global exception handler" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

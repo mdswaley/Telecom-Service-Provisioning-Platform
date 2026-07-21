@@ -26,6 +26,8 @@ public class JwtAuthenticationFilter implements GlobalFilter {
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
 
+        System.out.println("JWT FILTER EXECUTED");
+
         String path = exchange.getRequest()
                         .getURI()
                         .getPath();
@@ -43,6 +45,7 @@ public class JwtAuthenticationFilter implements GlobalFilter {
 
 
         if (authHeader == null || !authHeader.startsWith("Bearer ")) {
+            System.out.println("JWT TOKEN MISSING");
             return writeErrorResponse(exchange, HttpStatus.UNAUTHORIZED, "JWT Token is missing");
         }
 
@@ -61,33 +64,23 @@ public class JwtAuthenticationFilter implements GlobalFilter {
 
     private Mono<Void> writeErrorResponse(ServerWebExchange exchange, HttpStatus status, String message) {
 
-        ApiError error = ApiError.builder()
-                .statusCode(status)
-                .error(message)
-                .timeStamp(LocalDateTime.now())
-                .build();
-
-        byte[] bytes;
-
-        try {
-            bytes = new ObjectMapper()
-                    .writeValueAsBytes(error);
-        } catch (Exception e) {
-            return exchange.getResponse().setComplete();
-        }
-
         exchange.getResponse().setStatusCode(status);
         exchange.getResponse().getHeaders()
-                .add(HttpHeaders.CONTENT_TYPE,
-                        MediaType.APPLICATION_JSON_VALUE);
+                .setContentType(MediaType.APPLICATION_JSON);
 
-        return exchange.getResponse()
-                .writeWith(
-                        Mono.just(
-                                exchange.getResponse()
-                                        .bufferFactory()
-                                        .wrap(bytes)
-                        )
-                );
+        String response = """
+        {
+          "status": %d,
+          "message": "%s"
+        }
+        """.formatted(status.value(), message);
+
+        return exchange.getResponse().writeWith(
+                Mono.just(
+                        exchange.getResponse()
+                                .bufferFactory()
+                                .wrap(response.getBytes())
+                )
+        );
     }
 }
