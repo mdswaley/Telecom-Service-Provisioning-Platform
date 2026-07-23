@@ -1,9 +1,7 @@
 package com.example.api_gateway.Filter;
 
 
-import com.example.api_gateway.Advice.ApiError;
 import com.example.api_gateway.Service.JWTService;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
@@ -21,7 +19,6 @@ import java.time.LocalDateTime;
 public class JwtAuthenticationFilter implements GlobalFilter {
 
     private final JWTService jwtService;
-    private final ObjectMapper objectMapper;
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
