@@ -1,4 +1,4 @@
-package com.example.Customer.Service.Exception;
+package com.example.Order.Service.Advice;
 
 public class ResourceNotFoundException extends RuntimeException {
     public ResourceNotFoundException(String message) {

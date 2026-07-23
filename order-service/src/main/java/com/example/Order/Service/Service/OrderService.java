@@ -1,5 +1,6 @@
 package com.example.Order.Service.Service;
 
+import com.example.Order.Service.Advice.ResourceNotFoundException;
 import com.example.Order.Service.Client.CustomerClient;
 import com.example.Order.Service.Client.CustomerResponse;
 import com.example.Order.Service.Entity.OrderEntity;
@@ -28,7 +29,7 @@ public class OrderService {
                 customerClient.getCustomer(request.getCustomerId());
 
         if (customer == null) {
-            throw new RuntimeException("Customer is not present with id: " + request.getCustomerId());
+            throw new ResourceNotFoundException("Customer is not present with id: " + request.getCustomerId());
         }
 
         OrderEntity order = OrderEntity.builder()
@@ -54,7 +55,7 @@ public class OrderService {
         OrderEntity order = orderRepository
                 .findByOrderNumber(orderNumber)
                 .orElseThrow(() ->
-                        new RuntimeException("Order not found"));
+                        new ResourceNotFoundException("Order not found"));
 
         return mapToResponse(order);
     }
@@ -81,7 +82,7 @@ public class OrderService {
 
     public void updateOrderStatus(String orderNum, OrderStatus orderStatus) {
         OrderEntity order = orderRepository.findByOrderNumber(orderNum).orElseThrow(
-                () -> new RuntimeException("Order not found")
+                () -> new ResourceNotFoundException("Order not found")
         );
 
         order.setStatus(orderStatus);

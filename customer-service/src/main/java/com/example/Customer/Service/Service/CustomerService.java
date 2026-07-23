@@ -1,8 +1,8 @@
 package com.example.Customer.Service.Service;
 
+import com.example.Customer.Service.Advice.ResourceNotFoundException;
 import com.example.Customer.Service.DTO.CustomerDTO;
 import com.example.Customer.Service.Entity.CustomerEntity;
-import com.example.Customer.Service.Exception.ResourceNotFoundException;
 import com.example.Customer.Service.Repository.CustomerRepo;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
@@ -23,7 +23,7 @@ public class CustomerService {
         CustomerEntity customerEntity = customerRepo.findByEmail(customerDTO.getEmail()).orElse(null);
 
         if(customerEntity != null){
-            throw new RuntimeException("Customer already exist with given email : "+customerDTO.getEmail());
+            throw new ResourceNotFoundException("Customer already exist with given email : "+customerDTO.getEmail());
         }
 
         CustomerEntity create = modelMapper.map(customerDTO, CustomerEntity.class);
