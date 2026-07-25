@@ -20,10 +20,16 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @RequiredArgsConstructor
 public class WebSecurityConfig {
 
-    private final String[] permission = {"/auth/v1/**"
-            ,"/swagger-ui/**",
+    private final String[] permission = {"/auth/v1/**",
+            "/auth/**",
+            "/swagger-ui/**",
             "/swagger-ui.html",
-            "/v3/api-docs/**"};
+            "/v3/api-docs/**",
+            "/auth-service/v3/api-docs",
+            "/customer-service/v3/api-docs",
+            "/order-service/v3/api-docs",
+            "/provisioning-service/v3/api-docs",
+            "/notification-service/v3/api-docs"};
     private final JwtAuthenticationFilter jwtAuthenticationFilter;
 
     @Bean

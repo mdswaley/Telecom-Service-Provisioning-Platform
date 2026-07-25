@@ -4,19 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="Add Global Exception Handler in every microservice">
+    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="Add Swagger for UI">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/api_gateway/Filter/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/api_gateway/Filter/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/Config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/Config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provisioning-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provisioning-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provisioning-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/provisioning-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/Filter/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/Filter/JwtAuthenticationFilter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +23,8 @@
         <option value="Enum" />
         <option value="Dockerfile" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Exception" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -120,11 +114,11 @@
       <recent name="C:\Users\mdswa\IdeaProjects\Telecom-Service-Provisioning-Platform\api-gateway\src\main\java\com\example\api_gateway" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.Provisioning.Service.Config" />
+      <recent name="com.example.Notification.Service.Config" />
+      <recent name="com.example.Customer.Service.Configuration" />
       <recent name="com.example.api_gateway.Advice" />
       <recent name="com.example.api_gateway.Config" />
-      <recent name="com.example.api_gateway.Service" />
-      <recent name="com.example.Notification.Service.Client" />
-      <recent name="com.example.Provisioning.Service.ClientResponse" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -136,7 +130,7 @@
       <command value="mvn  clean spring-boot:run" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.CustomerServiceApplication">
+  <component name="RunManager" selected="Application.DiscoveryServerApplication">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.api_gateway.ApiGatewayApplication" />
       <module name="api-gateway" />
@@ -176,12 +170,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.Order.Service.OrderServiceApplication" />
-      <module name="Order-Service" />
+    <configuration name="DiscoveryServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.discovery.server.DiscoveryServerApplication" />
+      <module name="discovery-server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.Order.Service.*" />
+          <option name="PATTERN" value="com.example.discovery.server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -189,12 +183,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProvisioningServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.Provisioning.Service.ProvisioningServiceApplication" />
-      <module name="Provisioning-Service" />
+    <configuration name="NotificationServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.Notification.Service.NotificationServiceApplication" />
+      <module name="Notification-Service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.Provisioning.Service.*" />
+          <option name="PATTERN" value="com.example.Notification.Service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -204,11 +198,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.NotificationServiceApplication" />
         <item itemvalue="Application.CustomerServiceApplication" />
-        <item itemvalue="Application.OrderServiceApplication" />
-        <item itemvalue="Application.ProvisioningServiceApplication" />
         <item itemvalue="Application.AuthServiceApplication" />
         <item itemvalue="Application.ApiGatewayApplication" />
+        <item itemvalue="Application.DiscoveryServerApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -580,7 +574,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784783101966</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Add Swagger for UI">
+      <option name="closed" value="true" />
+      <created>1784953360827</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1784953360829</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -595,7 +597,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Get CustomerById" />
     <MESSAGE value="update customer partially by using customer id" />
     <MESSAGE value="Create order entity" />
     <MESSAGE value="Fixed the issue where the Spring Boot version was not compatible with the Spring Cloud Eureka version" />
@@ -620,7 +621,8 @@
     <MESSAGE value="Use JWT authentication for every microservice through api-gateway" />
     <MESSAGE value="adding advisor for global exception handler" />
     <MESSAGE value="Add Global Exception Handler in every microservice" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Global Exception Handler in every microservice" />
+    <MESSAGE value="Add Swagger for UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Swagger for UI" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

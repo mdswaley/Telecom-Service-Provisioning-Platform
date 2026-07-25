@@ -12,13 +12,23 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
-import java.time.LocalDateTime;
+import java.util.List;
 
 @Component
 @RequiredArgsConstructor
 public class JwtAuthenticationFilter implements GlobalFilter {
 
     private final JWTService jwtService;
+    private static final List<String> PUBLIC_PATHS = List.of(
+            "/auth",
+            "/swagger-ui",
+            "/v3/api-docs",
+            "/customers/v3/api-docs",
+            "/orders/v3/api-docs",
+            "/provisioning/v3/api-docs",
+            "/notifications/v3/api-docs"
+    );
+
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
@@ -29,7 +39,7 @@ public class JwtAuthenticationFilter implements GlobalFilter {
                         .getURI()
                         .getPath();
 
-        if (path.startsWith("/auth")) {
+        if (PUBLIC_PATHS.stream().anyMatch(path::startsWith)) {
             return chain.filter(exchange);
         }
 
