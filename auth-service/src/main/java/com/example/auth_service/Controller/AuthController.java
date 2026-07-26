@@ -5,6 +5,7 @@ import com.example.auth_service.Entity.CustomUserDetails;
 import com.example.auth_service.Entity.UserEntity;
 import com.example.auth_service.Repository.UserRepository;
 import com.example.auth_service.Service.AuthService;
+import io.swagger.v3.oas.annotations.Parameter;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
@@ -45,8 +46,8 @@ public class AuthController {
     }
 
     @PostMapping("/refresh")
-    public ResponseEntity<LoginResponse> refreshToken(
-            @CookieValue("refreshToken") String refreshToken) {
+    public ResponseEntity<LoginResponse> refreshToken(@Parameter(hidden = true) @CookieValue("refreshToken")
+                                                          String refreshToken) {
         LoginResponse res = authService.refreshToken(refreshToken);
 
         return ResponseEntity.ok(

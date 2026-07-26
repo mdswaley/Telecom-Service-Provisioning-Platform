@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="Without swagger config the uri sent request to the host path like (jarvix). After configure it is sent to localhost:8080">
+    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="Configure swagger for authorize feather for every microservice. so that we can pass header as a parameter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/Config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/Config/SwaggerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/com/example/Customer/Service/Configuration/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/com/example/Customer/Service/Configuration/SwaggerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/example/Notification/Service/Config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/example/Notification/Service/Config/SwaggerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/example/Order/Service/Config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/example/Order/Service/Config/SwaggerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/Config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/provisioning-service/src/main/java/com/example/Provisioning/Service/Config/SwaggerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/Controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/Controller/AuthController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +126,7 @@
       <command value="mvn  clean spring-boot:run" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.OrderServiceApplication">
+  <component name="RunManager" selected="Application.AuthServiceApplication">
     <configuration name="AuthServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.auth_service.AuthServiceApplication" />
       <module name="auth-service" />
@@ -198,9 +194,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AuthServiceApplication" />
         <item itemvalue="Application.NotificationServiceApplication" />
         <item itemvalue="Application.CustomerServiceApplication" />
-        <item itemvalue="Application.AuthServiceApplication" />
         <item itemvalue="Application.OrderServiceApplication" />
         <item itemvalue="Application.ProvisioningServiceApplication" />
       </list>
@@ -598,7 +594,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784961141316</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Configure swagger for authorize feather for every microservice. so that we can pass header as a parameter">
+      <option name="closed" value="true" />
+      <created>1785080612822</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1785080612822</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -613,7 +617,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed the issue where the Spring Boot version was not compatible with the Spring Cloud Eureka version" />
     <MESSAGE value="Create Different types of database for different microservices" />
     <MESSAGE value="Using feign client to call orderService to customerService" />
     <MESSAGE value="Get Customer from order-service through feignClient" />
@@ -638,7 +641,8 @@
     <MESSAGE value="Add Swagger for UI" />
     <MESSAGE value="Solve issue of CORS in microservice" />
     <MESSAGE value="Without swagger config the uri sent request to the host path like (jarvix). After configure it is sent to localhost:8080" />
-    <option name="LAST_COMMIT_MESSAGE" value="Without swagger config the uri sent request to the host path like (jarvix). After configure it is sent to localhost:8080" />
+    <MESSAGE value="Configure swagger for authorize feather for every microservice. so that we can pass header as a parameter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Configure swagger for authorize feather for every microservice. so that we can pass header as a parameter" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
