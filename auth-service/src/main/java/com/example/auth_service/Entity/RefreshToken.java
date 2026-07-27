@@ -21,7 +21,8 @@ public class RefreshToken {
 
     private String token;
 
-    @OneToOne
+    @ManyToOne
+    @JoinColumn(name = "user_id")
     private UserEntity user;
 
     private LocalDateTime expiryDate;

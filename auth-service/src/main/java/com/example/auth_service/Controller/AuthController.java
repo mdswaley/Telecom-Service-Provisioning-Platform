@@ -9,10 +9,14 @@ import io.swagger.v3.oas.annotations.Parameter;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.ResponseCookie;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
+
+import java.time.Duration;
 
 
 @RestController
@@ -46,13 +50,28 @@ public class AuthController {
     }
 
     @PostMapping("/refresh")
-    public ResponseEntity<LoginResponse> refreshToken(@Parameter(hidden = true) @CookieValue("refreshToken")
-                                                          String refreshToken) {
+    public ResponseEntity<LoginResponse> refreshToken(@Parameter(hidden = true)
+                                                          @CookieValue("refreshToken") String refreshToken,
+                                                      HttpServletResponse response) {
+
         LoginResponse res = authService.refreshToken(refreshToken);
 
+        ResponseCookie cookie = ResponseCookie.from("refreshToken", res.getRefreshToken())
+                .httpOnly(true)
+                .secure(false) // true when using HTTPS
+                .sameSite("Lax")
+                .path("/auth/v1/refresh")
+                .maxAge(Duration.ofDays(7))
+                .build();
+
+        response.addHeader(HttpHeaders.SET_COOKIE, cookie.toString());
+
         return ResponseEntity.ok(
-                new LoginResponse(res.getAccessToken(), res.getEmail()
-        ));
+                LoginResponse.builder()
+                        .accessToken(res.getAccessToken())
+                        .email(res.getEmail())
+                        .build()
+        );
     }
 
     @GetMapping("/profile")
