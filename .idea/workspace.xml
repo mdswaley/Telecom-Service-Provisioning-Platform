@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="Configure swagger for authorize feather for every microservice. so that we can pass header as a parameter">
+    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="hide required parameter for refresh token. bcz it already store in cookies so we don't need to pass body for that">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/Controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/Controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/Service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/Service/AuthService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +18,9 @@
       <list>
         <option value="Enum" />
         <option value="Dockerfile" />
-        <option value="Interface" />
         <option value="Exception" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -209,14 +209,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1782977601719</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Creating auth-service for security purpose">
-      <option name="closed" value="true" />
-      <created>1782978667197</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1782978667198</updated>
     </task>
     <task id="LOCAL-00002" summary="Adding api-gateway">
       <option name="closed" value="true" />
@@ -602,7 +594,15 @@
       <option name="project" value="LOCAL" />
       <updated>1785080612822</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="hide required parameter for refresh token. bcz it already store in cookies so we don't need to pass body for that">
+      <option name="closed" value="true" />
+      <created>1785081636575</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1785081636577</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -617,7 +617,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Create Different types of database for different microservices" />
     <MESSAGE value="Using feign client to call orderService to customerService" />
     <MESSAGE value="Get Customer from order-service through feignClient" />
     <MESSAGE value="Add update Order Status" />
@@ -642,7 +641,8 @@
     <MESSAGE value="Solve issue of CORS in microservice" />
     <MESSAGE value="Without swagger config the uri sent request to the host path like (jarvix). After configure it is sent to localhost:8080" />
     <MESSAGE value="Configure swagger for authorize feather for every microservice. so that we can pass header as a parameter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Configure swagger for authorize feather for every microservice. so that we can pass header as a parameter" />
+    <MESSAGE value="hide required parameter for refresh token. bcz it already store in cookies so we don't need to pass body for that" />
+    <option name="LAST_COMMIT_MESSAGE" value="hide required parameter for refresh token. bcz it already store in cookies so we don't need to pass body for that" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

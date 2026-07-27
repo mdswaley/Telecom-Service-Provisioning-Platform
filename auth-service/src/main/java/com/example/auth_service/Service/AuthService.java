@@ -4,8 +4,10 @@ import com.example.auth_service.DTO.LoginRequest;
 import com.example.auth_service.DTO.LoginResponse;
 import com.example.auth_service.DTO.RegisterRequest;
 import com.example.auth_service.DTO.RegisterResponse;
+import com.example.auth_service.Entity.RefreshToken;
 import com.example.auth_service.Entity.UserEntity;
 import com.example.auth_service.Exceptions.ResourceNotFound;
+import com.example.auth_service.Repository.RefreshTokenRepository;
 import com.example.auth_service.Repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
@@ -13,6 +15,8 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import java.time.LocalDateTime;
 
 
 @Service
@@ -23,6 +27,7 @@ public class AuthService {
     private final PasswordEncoder passwordEncoder;
     private final AuthenticationManager authenticationManager;
     private final JWTService jwtService;
+    private final RefreshTokenRepository refreshTokenRepository;
 
     public RegisterResponse register(RegisterRequest registerRequest){
         boolean exist = userRepository.existsByEmail(registerRequest.getEmail());
@@ -52,6 +57,14 @@ public class AuthService {
         String accessToken = jwtService.generateAccessToken(user);
         String refreshToken = jwtService.generateRefreshToken(user);
 
+        RefreshToken token = new RefreshToken();
+        token.setToken(refreshToken);
+        token.setUser(user);
+        token.setExpiryDate(LocalDateTime.now().plusDays(7));
+        token.setRevoked(false);
+
+        refreshTokenRepository.save(token);
+
         return LoginResponse.builder()
                 .accessToken(accessToken)
                 .refreshToken(refreshToken)
@@ -61,23 +74,40 @@ public class AuthService {
 
     public LoginResponse refreshToken(String refreshToken) {
 
-            if (!jwtService.isRefreshTokenValid(refreshToken)) {
-                throw new RuntimeException("Invalid Refresh Token");
-            }
+        RefreshToken storedToken = refreshTokenRepository.findByToken(refreshToken)
+                .orElseThrow(() -> new RuntimeException("Invalid Refresh Token"));
 
-            Long userId = jwtService.getUserIdFromToken(refreshToken);
+        if (storedToken.isRevoked()) {
+            throw new RuntimeException("Refresh Token has been revoked");
+        }
 
-            UserEntity user = userRepository.findById(userId)
-                    .orElseThrow(() ->
-                            new RuntimeException("User not found"));
+        if (!jwtService.isRefreshTokenValid(refreshToken)) {
+            throw new RuntimeException("Refresh Token expired");
+        }
 
-            String accessToken =
-                    jwtService.generateAccessToken(user);
+        UserEntity user = storedToken.getUser();
 
-            return LoginResponse.builder()
-                    .accessToken(accessToken)
-                    .refreshToken(refreshToken)
-                    .email(user.getEmail())
-                    .build();
+        // Revoke old token
+        storedToken.setRevoked(true);
+        refreshTokenRepository.save(storedToken);
+
+        // Generate new tokens
+        String newAccessToken = jwtService.generateAccessToken(user);
+        String newRefreshToken = jwtService.generateRefreshToken(user);
+
+        // Save new refresh token
+        RefreshToken token = new RefreshToken();
+        token.setToken(newRefreshToken);
+        token.setUser(user);
+        token.setExpiryDate(LocalDateTime.now().plusDays(7));
+        token.setRevoked(false);
+
+        refreshTokenRepository.save(token);
+
+        return LoginResponse.builder()
+                .accessToken(newAccessToken)
+                .refreshToken(newRefreshToken)
+                .email(user.getEmail())
+                .build();
     }
 }
