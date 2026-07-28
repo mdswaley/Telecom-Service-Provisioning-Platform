@@ -60,7 +60,7 @@ public class AuthController {
                 .httpOnly(true)
                 .secure(false) // true when using HTTPS
                 .sameSite("Lax")
-                .path("/auth/v1/refresh")
+                .path("/")
                 .maxAge(Duration.ofDays(7))
                 .build();
 
