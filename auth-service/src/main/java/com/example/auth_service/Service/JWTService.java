@@ -10,6 +10,8 @@ import io.jsonwebtoken.security.Keys;
 import javax.crypto.SecretKey;
 import java.nio.charset.StandardCharsets;
 import java.util.Date;
+import java.util.UUID;
+
 
 @Service
 @RequiredArgsConstructor
@@ -23,10 +25,13 @@ public class JWTService {
     }
 
     public String generateAccessToken(UserEntity user){
+        String jti = UUID.randomUUID().toString();
+
         return Jwts.builder()
                 .subject(user.getEmail())
                 .claim("userId", user.getId())
                 .claim("role", user.getUserRole().name())
+                .id(jti)
                 .issuedAt(new Date())
                 .expiration(new Date(System.currentTimeMillis() + 1000L * 60)) // valid 15 min
                 .signWith(getSecretKey())
@@ -49,6 +54,10 @@ public class JWTService {
                 .build()
                 .parseSignedClaims(token)
                 .getPayload();
+    }
+
+    public String getJti(String token) {
+        return extractClaims(token).getId();
     }
 
     public Long getUserIdFromToken(String token){

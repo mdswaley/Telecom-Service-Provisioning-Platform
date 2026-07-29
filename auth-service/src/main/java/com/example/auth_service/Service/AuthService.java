@@ -16,6 +16,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.time.Duration;
 import java.time.LocalDateTime;
 
 
@@ -28,6 +29,7 @@ public class AuthService {
     private final AuthenticationManager authenticationManager;
     private final JWTService jwtService;
     private final RefreshTokenRepository refreshTokenRepository;
+    private final RedisTokenService redisTokenService;
 
     public RegisterResponse register(RegisterRequest registerRequest){
         boolean exist = userRepository.existsByEmail(registerRequest.getEmail());
@@ -56,6 +58,14 @@ public class AuthService {
 
         String accessToken = jwtService.generateAccessToken(user);
         String refreshToken = jwtService.generateRefreshToken(user);
+
+        String jti = jwtService.getJti(accessToken);
+
+        redisTokenService.saveAccessToken(
+                user.getId(),
+                jti,
+                Duration.ofMinutes(1)
+        );
 
         RefreshToken token = new RefreshToken();
         token.setToken(refreshToken);
@@ -94,6 +104,14 @@ public class AuthService {
         // Generate new tokens
         String newAccessToken = jwtService.generateAccessToken(user);
         String newRefreshToken = jwtService.generateRefreshToken(user);
+
+        String jti = jwtService.getJti(newAccessToken);
+
+        redisTokenService.saveAccessToken(
+                user.getId(),
+                jti,
+                Duration.ofMinutes(1)
+        );
 
         // Save new refresh token
         RefreshToken token = new RefreshToken();
