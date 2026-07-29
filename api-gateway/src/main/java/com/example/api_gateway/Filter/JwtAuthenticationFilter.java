@@ -2,6 +2,7 @@ package com.example.api_gateway.Filter;
 
 
 import com.example.api_gateway.Service.JWTService;
+import com.example.api_gateway.Service.RedisTokenService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
@@ -19,6 +20,7 @@ import java.util.List;
 public class JwtAuthenticationFilter implements GlobalFilter {
 
     private final JWTService jwtService;
+    private final RedisTokenService redisTokenService;
     private static final List<String> PUBLIC_PATHS = List.of(
             "/auth",
             "/swagger-ui",
@@ -66,7 +68,23 @@ public class JwtAuthenticationFilter implements GlobalFilter {
             return writeErrorResponse(exchange, HttpStatus.UNAUTHORIZED, "Invalid JWT Token");
         }
 
+
+        Long userId = jwtService.getUserIdFromToken(token);
+        String tokenJti = jwtService.getJti(token);
+
+
+        String redisJti = redisTokenService.getCurrentJti(userId);
+
+        if (redisJti == null || !tokenJti.equals(redisJti)) {
+            return writeErrorResponse(
+                    exchange,
+                    HttpStatus.UNAUTHORIZED,
+                    "Token has been replaced"
+            );
+        }
+
         return chain.filter(exchange);
+
     }
 
     private Mono<Void> writeErrorResponse(ServerWebExchange exchange, HttpStatus status, String message) {

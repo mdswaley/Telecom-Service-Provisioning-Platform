@@ -40,6 +40,14 @@ public class JWTService {
         }
     }
 
+    public String getJti(String token) {
+        return extractClaims(token).getId();
+    }
+
+    public Long getUserIdFromToken(String token){
+        return Long.valueOf(extractClaims(token).getSubject());
+    }
+
     private SecretKey getSecretKey() {
         return Keys.hmacShaKeyFor(jwtSecretKey.getBytes(StandardCharsets.UTF_8));
     }
