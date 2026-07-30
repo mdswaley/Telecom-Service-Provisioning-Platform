@@ -26,10 +26,10 @@ public class JWTService {
                 .parseSignedClaims(token)
                 .getPayload();
     }
-
-    public String getEmailFromToken(String token){
-        return extractClaims(token).getSubject();
-    }
+//
+//    public String getEmailFromToken(String token){
+//        return extractClaims(token).getSubject();
+//    }
 
     public boolean isTokenValid(String token){
         try{
