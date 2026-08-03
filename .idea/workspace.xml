@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="Adding Redis dependency for store latest token">
+    <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="delete unused imports">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/api_gateway/Filter/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/api_gateway/Filter/JwtAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/api_gateway/Service/JWTService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/api_gateway/Service/JWTService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/Service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/Service/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/Service/JWTService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/Service/JWTService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,54 +208,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1782977601719</updated>
-    </task>
-    <task id="LOCAL-00006" summary="create entity and DTOs for authService">
-      <option name="closed" value="true" />
-      <created>1783787344790</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1783787344791</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Adding modelMapper dependency">
-      <option name="closed" value="true" />
-      <created>1783789176006</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1783789176006</updated>
-    </task>
-    <task id="LOCAL-00008" summary="create service, repository, config and custom exception">
-      <option name="closed" value="true" />
-      <created>1783789267541</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1783789267541</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Adding WebSecurityConfig">
-      <option name="closed" value="true" />
-      <created>1783836413961</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1783836413961</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Jwt token generated and configured it">
-      <option name="closed" value="true" />
-      <created>1783853537749</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1783853537749</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Test signup">
-      <option name="closed" value="true" />
-      <created>1783854924762</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1783854924762</updated>
     </task>
     <task id="LOCAL-00012" summary="Create login service and controller">
       <option name="closed" value="true" />
@@ -607,7 +553,55 @@
       <option name="project" value="LOCAL" />
       <updated>1785304598253</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="make changes in application.yaml">
+      <option name="closed" value="true" />
+      <created>1785305394511</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1785305394512</updated>
+    </task>
+    <task id="LOCAL-00056" summary="adding jti (jwt id) for unique specify">
+      <option name="closed" value="true" />
+      <created>1785305449725</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1785305449725</updated>
+    </task>
+    <task id="LOCAL-00057" summary="configure jti">
+      <option name="closed" value="true" />
+      <created>1785305489509</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1785305489509</updated>
+    </task>
+    <task id="LOCAL-00058" summary="update filter">
+      <option name="closed" value="true" />
+      <created>1785305518163</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1785305518164</updated>
+    </task>
+    <task id="LOCAL-00059" summary="delete unused methods">
+      <option name="closed" value="true" />
+      <created>1785391406617</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1785391406617</updated>
+    </task>
+    <task id="LOCAL-00060" summary="delete unused imports">
+      <option name="closed" value="true" />
+      <created>1785391552427</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1785391552427</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -622,12 +616,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adding Dependency and connect Order-service to Provisioning-service" />
-    <MESSAGE value="Create service method for provision request and generate simNum and msisdn" />
-    <MESSAGE value="update status of orders and create provisioning table" />
-    <MESSAGE value="Successfully sent message to notification service" />
-    <MESSAGE value="Successfully sent message to notification service log" />
-    <MESSAGE value="Add kafka in order and provisioning service" />
     <MESSAGE value="Modify ProvisioningController" />
     <MESSAGE value="Added Docker Compose configuration for Kafka and Zookeeper container setup. After order creation, the order status is automatically changing to COMPLETED instead of remaining in PROVISIONING state." />
     <MESSAGE value="sent notification message according to orderType" />
@@ -647,7 +635,13 @@
     <MESSAGE value="store refresh token" />
     <MESSAGE value="solve the issue with refresh token" />
     <MESSAGE value="Adding Redis dependency for store latest token" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding Redis dependency for store latest token" />
+    <MESSAGE value="make changes in application.yaml" />
+    <MESSAGE value="adding jti (jwt id) for unique specify" />
+    <MESSAGE value="configure jti" />
+    <MESSAGE value="update filter" />
+    <MESSAGE value="delete unused methods" />
+    <MESSAGE value="delete unused imports" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete unused imports" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

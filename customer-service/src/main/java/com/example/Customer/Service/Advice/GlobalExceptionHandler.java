@@ -21,7 +21,6 @@ public class GlobalExceptionHandler {
 
         return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
     }
-
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<ApiError> handleRuntimeException(RuntimeException ex) {
 
@@ -33,7 +32,6 @@ public class GlobalExceptionHandler {
 
         return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
     }
-
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ApiError> handleException(Exception ex) {
 
