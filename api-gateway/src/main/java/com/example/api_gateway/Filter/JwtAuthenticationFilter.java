@@ -31,7 +31,6 @@ public class JwtAuthenticationFilter implements GlobalFilter {
             "/notifications/v3/api-docs"
     );
 
-
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
 
@@ -51,7 +50,6 @@ public class JwtAuthenticationFilter implements GlobalFilter {
 
 //        System.out.println("Path = " + path);
 //        System.out.println("Auth Header = " + authHeader);
-
 
         if (authHeader == null || !authHeader.startsWith("Bearer ")) {
             System.out.println("JWT TOKEN MISSING");
