@@ -36,5 +36,4 @@ public class GlobalExceptionHandler {
         ApiError apiError = new ApiError(exception.getLocalizedMessage(),HttpStatus.FORBIDDEN);
         return new ResponseEntity<>(apiError,HttpStatus.FORBIDDEN);
     }
-
 }
