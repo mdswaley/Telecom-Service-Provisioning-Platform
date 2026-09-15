@@ -66,7 +66,6 @@ public class JwtAuthenticationFilter implements GlobalFilter {
             return writeErrorResponse(exchange, HttpStatus.UNAUTHORIZED, "Invalid JWT Token");
         }
 
-
         Long userId = jwtService.getUserIdFromToken(token);
         String tokenJti = jwtService.getJti(token);
 
