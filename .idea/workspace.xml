@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4859e6a8-b4c5-46fa-bc9f-98491b65315f" name="Changes" comment="delete unused imports">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/api_gateway/Service/RedisTokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/api_gateway/Service/RedisTokenService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +126,7 @@
       <command value="mvn  clean spring-boot:run" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.CustomerServiceApplication">
+  <component name="RunManager" selected="Application.AuthServiceApplication">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.api_gateway.ApiGatewayApplication" />
       <module name="api-gateway" />
@@ -193,8 +194,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CustomerServiceApplication" />
         <item itemvalue="Application.AuthServiceApplication" />
+        <item itemvalue="Application.CustomerServiceApplication" />
         <item itemvalue="Application.ApiGatewayApplication" />
         <item itemvalue="Application.DiscoveryServerApplication" />
         <item itemvalue="Application.NotificationServiceApplication" />
@@ -208,30 +209,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1782977601719</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Create login service and controller">
-      <option name="closed" value="true" />
-      <created>1783943809764</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1783943809764</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Adding filter chain and profile setup">
-      <option name="closed" value="true" />
-      <created>1783945613750</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1783945613750</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Create Refresh Token for continue give access">
-      <option name="closed" value="true" />
-      <created>1784010936806</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1784010936806</updated>
     </task>
     <task id="LOCAL-00015" summary="Add EnableEurekaServer annotation and configure in yaml file">
       <option name="closed" value="true" />
@@ -601,7 +578,31 @@
       <option name="project" value="LOCAL" />
       <updated>1785391552427</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="delete unused imports">
+      <option name="closed" value="true" />
+      <created>1785735522796</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1785735522797</updated>
+    </task>
+    <task id="LOCAL-00062" summary="delete unused imports">
+      <option name="closed" value="true" />
+      <created>1785735590384</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1785735590384</updated>
+    </task>
+    <task id="LOCAL-00063" summary="delete unused imports">
+      <option name="closed" value="true" />
+      <created>1785735626780</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1785735626780</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
